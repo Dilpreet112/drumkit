@@ -1,9 +1,9 @@
 // Detecting button pressed
-var numberOfDrumBtns = document.querySelectorAll(".drum").length;
+var numberOfDrumBtns = document.querySelectorAll("/drumkit/.drum").length;
 
 for (var i = 0; i<numberOfDrumBtns; i++) {
     
-    document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+    document.querySelectorAll("/drumkit/.drum")[i].addEventListener("click", function(){
 
         var btnInnerHTML = this.innerHTML;
         play(btnInnerHTML);
@@ -23,31 +23,31 @@ document.addEventListener("keypress", function(KeyboardEvent){
 function play(key) {
     switch (key) {
        case "w":
-            var tom1 = new Audio('sounds/tom-1.mp3');
+            var tom1 = new Audio('/drumkit/tom-1.mp3');
             tom1.play();               
            break;
        case "a":
-            var tom2 = new Audio('sounds/tom-2.mp3');
+            var tom2 = new Audio('/drumkit/tom-2.mp3');
             tom2.play();               
            break;
        case "s":
-            var tom3 = new Audio('sounds/tom-3.mp3');
+            var tom3 = new Audio('/drumkit/tom-3.mp3');
             tom3.play();               
            break;
        case "d":
-            var tom4 = new Audio('sounds/tom-4.mp3');
+            var tom4 = new Audio('/drumkit/tom-4.mp3');
             tom4.play();               
            break;
        case "j":
-            var kickbass = new Audio('sounds/kick-bass.mp3');
+            var kickbass = new Audio('/drumkit/kick-bass.mp3');
             kickbass.play();               
            break;
        case "k":
-            var snare = new Audio('sounds/snare.mp3');
+            var snare = new Audio('/drumkit/snare.mp3');
             snare.play();               
            break;
        case "l":
-            var crash = new Audio('sounds/crash.mp3');
+            var crash = new Audio('/drumkit/crash.mp3');
             crash.play();               
            break;
    
@@ -58,7 +58,7 @@ function play(key) {
 
 
 function btnAnimation(currentKey){
-    var activebtn = document.querySelector("." + currentKey);
+    var activebtn = document.querySelector("/drumkit/." + currentKey);
     activebtn.classList.add("pressed");
     
     setTimeout(function(){
