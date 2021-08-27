@@ -1,9 +1,9 @@
 // Detecting button pressed
-var numberOfDrumBtns = document.querySelectorAll("/drumkit/.drum").length;
+var numberOfDrumBtns = document.querySelectorAll(".drum").length;
 
 for (var i = 0; i<numberOfDrumBtns; i++) {
     
-    document.querySelectorAll("/drumkit/.drum")[i].addEventListener("click", function(){
+    document.querySelectorAll(".drum")[i].addEventListener("click", function(){
 
         var btnInnerHTML = this.innerHTML;
         play(btnInnerHTML);
@@ -58,7 +58,7 @@ function play(key) {
 
 
 function btnAnimation(currentKey){
-    var activebtn = document.querySelector("/drumkit/." + currentKey);
+    var activebtn = document.querySelector("." + currentKey);
     activebtn.classList.add("pressed");
     
     setTimeout(function(){
